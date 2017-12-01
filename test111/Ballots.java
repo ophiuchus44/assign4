@@ -111,6 +111,14 @@ public class Ballots extends JPanel{
 
 	}
 
+	public void resetBallots(){
+		for (int a=0; a<theButtons.length; a++){
+			theButtons[a].setForeground(Color.BLACK);
+			vote = "";
+		}
+		
+	}	
+
 //	public boolean getStatus()
 //	{
 //		return clicked;
@@ -179,6 +187,8 @@ public class Ballots extends JPanel{
 
 */
 
+
+
 	private class BListener implements ActionListener
 	{
 
@@ -235,6 +245,7 @@ public class Ballots extends JPanel{
 							//System.out.println(txtLocal);
 							//return; // break out after so vote doesn't get assigned to select write in
 						}
+
 		
 						theButtons[i].setForeground(Color.RED);
 						vote = theButtons[i].getText();
